@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/stoic-quote/static/css/main.b2f2d430.chunk.css",
+    "main.css": "/stoic-quote/static/css/main.c4505652.chunk.css",
     "main.js": "/stoic-quote/static/js/main.c61111d2.chunk.js",
     "main.js.map": "/stoic-quote/static/js/main.c61111d2.chunk.js.map",
     "runtime-main.js": "/stoic-quote/static/js/runtime-main.a50df5be.js",
@@ -8,16 +8,16 @@
     "static/js/2.5c1c982e.chunk.js": "/stoic-quote/static/js/2.5c1c982e.chunk.js",
     "static/js/2.5c1c982e.chunk.js.map": "/stoic-quote/static/js/2.5c1c982e.chunk.js.map",
     "index.html": "/stoic-quote/index.html",
-    "precache-manifest.e7e437bebcddbb428d8e4b76e813b776.js": "/stoic-quote/precache-manifest.e7e437bebcddbb428d8e4b76e813b776.js",
+    "precache-manifest.0f77a64eb1930b0ab017c0c40380f09c.js": "/stoic-quote/precache-manifest.0f77a64eb1930b0ab017c0c40380f09c.js",
     "service-worker.js": "/stoic-quote/service-worker.js",
-    "static/css/main.b2f2d430.chunk.css.map": "/stoic-quote/static/css/main.b2f2d430.chunk.css.map",
+    "static/css/main.c4505652.chunk.css.map": "/stoic-quote/static/css/main.c4505652.chunk.css.map",
     "static/js/2.5c1c982e.chunk.js.LICENSE.txt": "/stoic-quote/static/js/2.5c1c982e.chunk.js.LICENSE.txt",
     "static/media/marcus.png": "/stoic-quote/static/media/marcus.35057d0d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a50df5be.js",
     "static/js/2.5c1c982e.chunk.js",
-    "static/css/main.b2f2d430.chunk.css",
+    "static/css/main.c4505652.chunk.css",
     "static/js/main.c61111d2.chunk.js"
   ]
 }
