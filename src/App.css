@@ -51,15 +51,23 @@ footer {
   font-size: 11px;
 }
 
-.image-container {
-  width: 350px;
-  height: auto;
-  object-fit: fill;
-  padding: 0 3em;
-}
 .image-container img {
-  width: 300px;
+  width: 320px;
   height: auto;
+  filter: grayscale(90%);
+}
+
+.image-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 52px;
+  font-weight: bold;
+  position: absolute;
+  opacity: 50%;
+  right: 23px;
+  top: 137px;
+  z-index: -1;
+  letter-spacing: 8px;
 }
 
 .quote-container {
@@ -85,28 +93,28 @@ footer {
   width: auto;
   height: auto;
   padding: .5em .7em;
-  border: 2px solid var(--light);
   cursor: pointer;
   background: none;
   transition: .5s;
   font-family: var(--font-fam);
   font-size: var(--body);
-  border-radius: 1px;
   color: var(--light);
+  border: none;
 }
 
 .btn:hover {
   border: none;
   color: white;
   font-size: 20px;
-  transform:scale(1.1);
-  background-color: var(--accent);
+  transform:scale(1.3);
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .refresh {
   margin: 0 2px;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 @media (min-width: 600px) {

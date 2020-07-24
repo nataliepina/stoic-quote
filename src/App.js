@@ -38,6 +38,7 @@ class App extends React.Component {
           </div>
           <div className='image-container'>
             <img src={logo} alt="marcus aurelius" />
+            <span className="image-text">STOICICM</span>
           </div>
         </section>
         <footer>
