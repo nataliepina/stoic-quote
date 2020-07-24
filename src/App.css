@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;500;600;700&display=swap');
+
 *, 
 *::before,
 *::after {
@@ -9,15 +11,12 @@ html {
 }
 
 :root {
-  --ff-primary: 'Source Sans Pro', sans-serif;
-  --ff-secondary: 'Source Code Pro', monospace;
-  --fw-reg: 300;
-  --fw-bold: 900;
+  --font-fam: 'Sora', sans-serif;
 
-  --light: #FCFCFC;
-  --medium: #d3d3d3;
-  --dark: #121113;
-  --accent: #a48dc9;
+  --light: hsl(180, 7%, 97%);
+  --medium: hsl(200, 0%, 48%);
+  --dark: hsl(210, 100%, 0%);
+  --accent: hsl(202, 66%, 25%);
     
   --h1: 3rem;
   --h2: 2.25rem;
@@ -25,44 +24,93 @@ html {
   --body: 1rem;
 }
 
-.container {
+.wrapper {
   width: 100vw;
   height: 100vh;
-  background: var(--clr-dark);
-  color: var(--clr-light);
   margin: 0;
-  font-family: sans-serif;
-  font-size: var(--fs-body);
   line-height: 1.6;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
+body {
+  font-family: var(--font-fam);
+  background: var(--dark);
+  color: var(--light);
+}
 
 section {
   padding: 3em 3em 6em;
-}
-
-.wrapper {
-  background: var(--dark);
-  color: var(--light);
+  display: block;
 }
 
 footer {
-  background: var(--dark);
-  color: var(--light);
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 3px 6px;
+  font-size: 11px;
 }
 
-header {
-
+.image-container {
+  width: 350px;
+  height: auto;
+  object-fit: fill;
+  padding: 0 3em;
+}
+.image-container img {
+  width: 300px;
+  height: auto;
 }
 
 .quote-container {
   display: block;
+  padding: 0 2em;
 }
 
 .quote-body {
-  font-weight: var(--body);
+  font-size: 4vw;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 .quote-author {
-  font-weight: var(--body);
+  font-size: var(--h3);
+}
+
+.btn-container{
+  margin: 3em 0em;
+}
+
+.btn {
+  width: auto;
+  height: auto;
+  padding: .5em .7em;
+  border: 2px solid var(--light);
+  cursor: pointer;
+  background: none;
+  transition: .5s;
+  font-family: var(--font-fam);
+  font-size: var(--body);
+  border-radius: 1px;
+  color: var(--light);
+}
+
+.btn:hover {
+  border: none;
+  color: white;
+  font-size: 20px;
+  transform:scale(1.1);
+  background-color: var(--accent);
+}
+
+.refresh {
+  margin: 0 2px;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 600px) {
+  section {
+    display: flex;
+  }
 }
