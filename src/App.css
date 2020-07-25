@@ -55,6 +55,7 @@ footer {
   width: 320px;
   height: auto;
   filter: grayscale(90%);
+  z-index: -2;
 }
 
 .image-text {
@@ -76,7 +77,7 @@ footer {
 }
 
 .quote-body {
-  font-size: 3vw;
+  font-size: 3.5vw;
   font-weight: 700;
   margin-bottom: 0;
 }
