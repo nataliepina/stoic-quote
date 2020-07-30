@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/stoic-quote/precache-manifest.0f77a64eb1930b0ab017c0c40380f09c.js"
+  "/stoic-quote/precache-manifest.1d94599ffd473d4eebd72b94fc20109b.js"
 );
 
 self.addEventListener('message', (event) => {
