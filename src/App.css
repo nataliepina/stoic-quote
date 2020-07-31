@@ -84,10 +84,11 @@ footer {
 
 .quote-author {
   font-size: var(--h3);
-}
-
-.btn-container{
-  margin: 3em 0em;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-right: 1em;
+  align-items: center;
 }
 
 .btn {
@@ -114,8 +115,8 @@ footer {
 
 .refresh {
   margin: 0 2px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 @media (min-width: 600px) {

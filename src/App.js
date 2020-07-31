@@ -4,9 +4,7 @@ import logo from './img/marcus.png';
 import refresh from './img/refresh.png';
 
 // TO DO
-// add photo
-// responsive text sizing
-// animations
+// Raiting pillar of quotes
 
 const { quotes } = require('./mockDatabase.json')
 
@@ -30,15 +28,18 @@ class App extends React.Component {
       <div className='wrapper'>
         <section>
           <div className='text-container'>
-            <p className='quote-body'>{quote}</p>
-            <p className='quote-author'>{`- ${author}`}</p>
-            <div className="btn-container">
-              <button className='btn' onClick={() => this.setQuote()}><img className="refresh" src={refresh} alt="refresh" /></button>
-            </div>
+            <p className='quote-body'>
+              {quote}
+            </p>
+            <p className='quote-author'>
+              {`- ${author}`}
+              <button className='btn' onClick={() => this.setQuote()}>
+                <img className="refresh" src={refresh} alt="refresh" />
+              </button>
+            </p>
           </div>
           <div className='image-container'>
             <img src={logo} alt="marcus aurelius" />
-            <span className="image-text">STOICICM</span>
           </div>
         </section>
         <footer>
