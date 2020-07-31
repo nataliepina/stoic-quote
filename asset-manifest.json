@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/stoic-quote/static/css/main.c4505652.chunk.css",
-    "main.js": "/stoic-quote/static/js/main.a193855a.chunk.js",
-    "main.js.map": "/stoic-quote/static/js/main.a193855a.chunk.js.map",
+    "main.css": "/stoic-quote/static/css/main.4c2ddac5.chunk.css",
+    "main.js": "/stoic-quote/static/js/main.ff51e37e.chunk.js",
+    "main.js.map": "/stoic-quote/static/js/main.ff51e37e.chunk.js.map",
     "runtime-main.js": "/stoic-quote/static/js/runtime-main.a50df5be.js",
     "runtime-main.js.map": "/stoic-quote/static/js/runtime-main.a50df5be.js.map",
     "static/js/2.5c1c982e.chunk.js": "/stoic-quote/static/js/2.5c1c982e.chunk.js",
     "static/js/2.5c1c982e.chunk.js.map": "/stoic-quote/static/js/2.5c1c982e.chunk.js.map",
     "index.html": "/stoic-quote/index.html",
-    "precache-manifest.1d94599ffd473d4eebd72b94fc20109b.js": "/stoic-quote/precache-manifest.1d94599ffd473d4eebd72b94fc20109b.js",
+    "precache-manifest.e17e05b199eb065e410c6ebba09dfb0e.js": "/stoic-quote/precache-manifest.e17e05b199eb065e410c6ebba09dfb0e.js",
     "service-worker.js": "/stoic-quote/service-worker.js",
-    "static/css/main.c4505652.chunk.css.map": "/stoic-quote/static/css/main.c4505652.chunk.css.map",
+    "static/css/main.4c2ddac5.chunk.css.map": "/stoic-quote/static/css/main.4c2ddac5.chunk.css.map",
     "static/js/2.5c1c982e.chunk.js.LICENSE.txt": "/stoic-quote/static/js/2.5c1c982e.chunk.js.LICENSE.txt",
     "static/media/marcus.png": "/stoic-quote/static/media/marcus.35057d0d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a50df5be.js",
     "static/js/2.5c1c982e.chunk.js",
-    "static/css/main.c4505652.chunk.css",
-    "static/js/main.a193855a.chunk.js"
+    "static/css/main.4c2ddac5.chunk.css",
+    "static/js/main.ff51e37e.chunk.js"
   ]
 }
