@@ -9,7 +9,7 @@
 
 ## Daily Stoicism
 
-I am utilizing this as a place to record and share my favorite stoic quotes. I hope you enjoy! 
+I am utilizing this as a place to store and share my favorite stoic quotes. Teachings by Marcus Aurelius, Seneca, and Epictetus. I hope you enjoy! 
 
 
 (Shout out to /r/Stoicism and The Daily Stoic by Ryan Holiday)
