@@ -1,16 +1,19 @@
 {
   "quotes": [
     {
-      "quote": "Our life is what our thoughts make it.", 
-      "author": "Marcus Aurelius"
+      "quote": "The universe is change; our life is what our thoughts make it", 
+      "author": "Marcus Aurelius",
+      "citation": "Meditations IV, 3"
     },
     {
       "quote": "The obstacle on the path becomes the way.", 
-      "author": "Marcus Aurelius"
+      "author": "Marcus Aurelius",
+      "citation": "Meditations V, 20"
     },
     {
       "quote": "The best revenge is to not be like your enemy.", 
-      "author": "Marcus Aurelius"
+      "author": "Marcus Aurelius",
+      "citation": "Meditations VI, 6"
     },
     {
       "quote": "To live the good life: We have the potential for it... If we can learn to be indifferent to what makes no difference.",
@@ -58,7 +61,8 @@
     },
     {
       "quote": "In your actions, don't procrastinate. In your conversations, don't confuse. In your thoughts, don't wander. In your soul, don't be passive or aggressive. In your life, don't be all about business.",
-      "author": "Marcus Aurelius"
+      "author": "Marcus Aurelius", 
+      "citation": "Meditations"
     }
   ]
 }
