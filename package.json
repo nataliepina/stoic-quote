@@ -1,7 +1,8 @@
 {
   "name": "stoic-quote",
+  "author": "Natalie Pina",
   "version": "0.1.0",
-  "description": "A collection of stoic quotes",
+  "description": "A Collection of Stoic Quotes",
   "private": true,
   "homepage": "https://nataliepina.github.io/stoic-quote",
   "keywords": [
