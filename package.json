@@ -10,7 +10,8 @@
     "quote generator",
     "react",
     "stoic",
-    "daily stoic quotes"
+    "daily stoic quotes",
+    "typescript"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
