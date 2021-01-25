@@ -6,7 +6,7 @@ import Footer from './Footer';
 const App: React.FC = () => {
 	return (
 		<div className="App">
-			<h1 className="Title">Daily Stoic Quote</h1>
+			<h1 className="Title">Stoic Quotes</h1>
 			<StoicQuote />
 			<Footer />
 		</div>
