@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
 
-*, 
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -11,14 +13,15 @@ html {
 }
 
 :root {
-  --font-fam: 'Sora', sans-serif;
+  --font-fam: "Sora", sans-serif;
+  --font-fam-secondary: "Fraunces", serif;
 
   --light: hsl(180, 7%, 97%);
   --medium: hsl(202, 5%, 69%);
   --dark: hsl(210, 100%, 0%);
   --accent: hsl(202, 66%, 25%);
   --accent-light: hsl(202, 61%, 48%);
-    
+
   --h1: 3rem;
   --h2: 2.25rem;
   --h3: 1.25rem;
@@ -28,69 +31,77 @@ html {
 .App,
 body,
 html {
-	text-align: center;
-	min-height: 100vh;
-	font-size: calc(10px + 2vmin);
-	background-color:	var(--dark);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  text-align: center;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Quote {
-	min-height: 80vh;
-	width: 75vw;
-	margin: 1rem auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  min-height: 80vh;
+  width: 75vw;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-	font-family: var(--font-fam);
+  font-family: var(--font-fam-secondary);
+  font-weight: 300;
 }
 
 .Quote-Main {
-	width: 100%;
-	font-family: var(--font-fam);
+  width: 100%;
+  min-height: 450px;
+}
+
+.author {
+  color: var(--light);
+  font-family: var(--font-fam-secondary);
+}
+
+.quote-container {
+  margin: 2em 0;
 }
 
 .Quote-Buttons {
-	margin: 0.5rem auto;
-	width: 100%;
-	display: flex;
+  margin: 0.5rem auto;
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
 
 .Quote-Buttons button {
-  font-family: var(--font-fam);
   font-size: 1rem;
+  font-family: var(--font-fam-secondary);
+  font-weight: 500;
 }
 
 .Title {
   margin: 0.75rem auto 0;
-	color: var(--medium);
-  font-size: 2rem;
-  font-family: var(--font-fam);
+  color: var(--medium);
+  font-size: 2.3rem;
+  font-weight: 300;
+  font-family: "Cinzel", serif;
 }
 
 .Tweet-Button {
-	color: var(--light);
-	text-decoration: none;
+  color: var(--light);
+  text-decoration: none;
 }
 
 .Footer {
   font-family: var(--font-fam);
-	width: 100%;
-	color: var(--light);
-	font-size: 0.6rem;
-}
-
-.Footer p {
-	padding: 0.3rem 0;
+  width: 100%;
+  color: var(--light);
+  font-size: 0.6rem;
 }
 
 .Footer a {
-	color: var(--accent);
-	text-decoration: none;
+  color: var(--accent);
+  text-decoration: none;
 }
 
 .Footer a:hover {
@@ -106,25 +117,25 @@ html {
 }
 
 .line-icon::before,
-.line-icon::after {  
-  color: white;    
+.line-icon::after {
+  color: white;
   /* Styles kept */
   width: 35%;
   height: 1px;
 
   /* Changed to border-top (instead of border) to simulate a line better */
-  border-top: 2px solid #ccc; 
+  border-top: 2px solid #ccc;
 
   /* Styles added */
   display: inline-block;
-  content: '';
+  content: "";
 
   /* Use padding to vertical align the line */
   /* Use padding in em for a responsive icon height */
-  padding-top: 0.5em; 
+  padding-top: 0.5em;
 
-  /* Use margins to give the lines some spacement around the icon */
-  /* Use margins in % for a responsive spacement */
-  margin-left: 5%; 
+  /* Use margins to give the lines some space around the icon */
+  /* Use margins in % for a responsive space */
+  margin-left: 5%;
   margin-right: 5%;
 }
