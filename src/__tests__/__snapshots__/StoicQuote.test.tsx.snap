@@ -3,10 +3,10 @@
 exports[`Stoic Quote tests should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="Quote"
+    class="quote"
   >
     <main
-      class="sc-bdfBwQ hHGPNm Quote-Main"
+      class="main"
     >
       <div
         aria-busy="true"
@@ -105,23 +105,23 @@ exports[`Stoic Quote tests should match snapshot 1`] = `
       </div>
     </main>
     <section
-      class="Quote-Buttons"
+      class="btn-wrapper"
     >
       <button
-        class="sc-dlfnbm iaQAIo"
+        class="sc-bdfBwQ ldRByT"
       >
         New Quote
       </button>
       <button
-        class="sc-dlfnbm iaQAIo"
+        class="sc-bdfBwQ ldRByT"
       >
         Copy
       </button>
       <button
-        class="sc-dlfnbm iaQAIo"
+        class="sc-bdfBwQ ldRByT"
       >
         <a
-          class="Tweet-Button"
+          class="btn-tweet"
           href="https://twitter.com/intent/tweet?text="
           id="tweet-quote"
           rel="noopener noreferrer"

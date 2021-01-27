@@ -4,9 +4,10 @@ import Footer from "./Footer";
 import StoicQuote from "./StoicQuote";
 
 const App: React.FC = () => {
+  const title: string = "Stoic Quotes";
   return (
-    <div className="App">
-      <h1 className="Title">Stoic Quotes</h1>
+    <div className="app">
+      <h1 className="title">{title}</h1>
       <StoicQuote />
       <Footer />
     </div>

@@ -3,18 +3,18 @@
 exports[`App tests should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="App"
+    class="app"
   >
     <h1
-      class="Title"
+      class="title"
     >
       Stoic Quotes
     </h1>
     <div
-      class="Quote"
+      class="quote"
     >
       <main
-        class="sc-bdfBwQ hHGPNm Quote-Main"
+        class="main"
       >
         <div
           aria-busy="true"
@@ -113,23 +113,23 @@ exports[`App tests should match snapshot 1`] = `
         </div>
       </main>
       <section
-        class="Quote-Buttons"
+        class="btn-wrapper"
       >
         <button
-          class="sc-dlfnbm iaQAIo"
+          class="sc-bdfBwQ ldRByT"
         >
           New Quote
         </button>
         <button
-          class="sc-dlfnbm iaQAIo"
+          class="sc-bdfBwQ ldRByT"
         >
           Copy
         </button>
         <button
-          class="sc-dlfnbm iaQAIo"
+          class="sc-bdfBwQ ldRByT"
         >
           <a
-            class="Tweet-Button"
+            class="btn-tweet"
             href="https://twitter.com/intent/tweet?text="
             id="tweet-quote"
             rel="noopener noreferrer"
@@ -156,16 +156,16 @@ exports[`App tests should match snapshot 1`] = `
       </section>
     </div>
     <footer
-      class="Footer"
+      class="footer"
     >
       <p>
         <a
           data-testid="footer"
-          href="https://github.com/nataliepina"
+          href="https://github.com/nataliepina/stoic-quote"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Natalie Pina ©2021
+          Natalie Pina &copy;2021
         </a>
       </p>
     </footer>

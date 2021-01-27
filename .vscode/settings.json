@@ -1,7 +1,9 @@
 {
   "cSpell.words": [
+    "Pina",
+    "fontawesome",
     "fortawesome",
-    "fontawesome"
+    "testid"
   ],
   "editor.codeActionsOnSave": {
       "source.organizeImports": true

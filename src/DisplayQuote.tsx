@@ -2,7 +2,6 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { BlockQuote } from "./styledComponents";
 
 interface QuoteData {
   quote: string;
@@ -21,8 +20,9 @@ const DisplayQuote: React.FC<Props> = ({ quote }) => {
           <FontAwesomeIcon icon={faQuoteLeft} />
         </div>
       </div>
+
       <div className="quote-container">
-        <BlockQuote>{quote?.quote}</BlockQuote>
+        <blockquote className="blockquote">{quote?.quote}</blockquote>
         <cite className="author">- {quote?.author}</cite>
       </div>
 

@@ -25,14 +25,20 @@ exports[`DisplayQuote tests should match snapshot 1`] = `
       </svg>
     </div>
   </div>
-  <blockquote
-    class="sc-gsTCUz kCeZdJ"
+  <div
+    class="quote-container"
   >
-    testing
-  </blockquote>
-  <cite>
-    - the tester
-  </cite>
+    <blockquote
+      class="blockquote"
+    >
+      testing
+    </blockquote>
+    <cite
+      class="author"
+    >
+      - the tester
+    </cite>
+  </div>
   <div
     class="line-container"
   >
