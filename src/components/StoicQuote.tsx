@@ -4,8 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import styled from "styled-components";
+import { copyText } from "../helpers/helpers";
 import DisplayQuote from "./DisplayQuote";
-import { copyText } from "./helpers/helpers";
 interface QuoteData {
   quote: string;
   author: string;

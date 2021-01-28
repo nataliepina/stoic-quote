@@ -12,7 +12,7 @@ exports[`Footer tests should match snapshot 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        Natalie Pina &copy;2021
+        Natalie Pina © 2021
       </a>
     </p>
   </footer>

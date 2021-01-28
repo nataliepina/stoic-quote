@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import DisplayQuote from "../DisplayQuote";
+import DisplayQuote from "../components/DisplayQuote";
 
 describe("DisplayQuote tests", () => {
   interface QuoteData {

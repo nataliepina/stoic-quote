@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-  const copyright: string = "Natalie Pina &copy;2021";
+  const copyright: string = "Natalie Pina \u00A9 2021";
 
   return (
     <footer className="footer">

@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import StoicQuote from "../StoicQuote";
+import StoicQuote from "../components/StoicQuote";
 
 describe("Stoic Quote tests", () => {
   it("should match snapshot", () => {

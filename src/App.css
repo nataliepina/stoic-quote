@@ -12,8 +12,7 @@ html {
 }
 
 :root {
-  --font-fam: "Sora", sans-serif;
-  --font-fam-secondary: "Fraunces", serif;
+  --font-fam: "Fraunces", serif;
 
   --light: hsl(180, 7%, 97%);
   --medium: hsl(202, 5%, 69%);
@@ -53,8 +52,9 @@ html {
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
+  place-items: center center;
   font-family: var(--font-fam-secondary);
   font-weight: 300;
 }
@@ -109,12 +109,12 @@ html {
   font-size: 0.6rem;
 }
 
-.Footer a {
+.footer a {
   color: var(--accent);
   text-decoration: none;
 }
 
-.Footer a:hover {
+.footer a:hover {
   color: var(--accent-light);
 }
 

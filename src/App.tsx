@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Footer from "./Footer";
-import StoicQuote from "./StoicQuote";
+import Footer from "./components/Footer";
+import StoicQuote from "./components/StoicQuote";
 
 const App: React.FC = () => {
   const title: string = "Stoic Quotes";

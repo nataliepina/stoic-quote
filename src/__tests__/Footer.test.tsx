@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import Footer from "../Footer";
+import Footer from "../components/Footer";
 
 describe("Footer tests", () => {
   it("should render without breaking", () => {
