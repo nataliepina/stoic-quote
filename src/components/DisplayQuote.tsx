@@ -1,7 +1,7 @@
-import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 interface QuoteData {
   quote: string;

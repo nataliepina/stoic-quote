@@ -1,11 +1,11 @@
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useRef, useState } from "react";
-import Loader from "react-loader-spinner";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import styled from "styled-components";
-import { copyText } from "../helpers/helpers";
-import DisplayQuote from "./DisplayQuote";
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useRef, useState } from 'react';
+import Loader from 'react-loader-spinner';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import styled from 'styled-components';
+import { copyText } from '../helpers/helpers';
+import DisplayQuote from './DisplayQuote';
 interface QuoteData {
   quote: string;
   author: string;
@@ -31,12 +31,12 @@ export const Button = styled.button`
 const StoicQuote: React.FC = () => {
   const [quote, setQuote] = useState<QuoteData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [toolTip, setToolTip] = useState("Copy");
-  const text = useRef("");
-  const newQuoteText = "New Quote";
+  const [toolTip, setToolTip] = useState('Copy');
+  const text = useRef('');
+  const newQuoteText = 'New Quote';
 
   useEffect(() => {
-    const stoicQuote = require("stoic-quotes");
+    const stoicQuote = require('stoic-quotes');
 
     const getQuote = async () => {
       try {
@@ -62,8 +62,8 @@ const StoicQuote: React.FC = () => {
 
   const handleCopy = () => {
     copyText(text.current);
-    setToolTip("Copied");
-    setTimeout(() => setToolTip("Copy"), 1500);
+    setToolTip('Copied');
+    setTimeout(() => setToolTip('Copy'), 1500);
   };
 
   return (

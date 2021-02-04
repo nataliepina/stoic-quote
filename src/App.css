@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
 
 *,
 *::before,
@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  --font-fam: "Fraunces", serif;
+  --font-fam: 'Fraunces', serif;
 
   --light: hsl(180, 7%, 97%);
   --medium: hsl(202, 5%, 69%);
@@ -43,7 +43,6 @@ html {
   width: 100%;
   opacity: 0.7;
   width: 100%;
-  min-height: 450px;
 }
 
 .quote {
@@ -55,7 +54,7 @@ html {
   /* align-items: center;
   justify-content: center; */
   place-items: center center;
-  font-family: var(--font-fam-secondary);
+  font-family: var(--font-fam);
   font-weight: 300;
 }
 
@@ -68,7 +67,7 @@ html {
 
 .author {
   color: var(--light);
-  font-family: var(--font-fam-secondary);
+  font-family: var(--font-fam);
 }
 
 .quote-container {
@@ -85,8 +84,8 @@ html {
 
 .btn-wrapper button {
   font-size: 1rem;
-  font-family: var(--font-fam-secondary);
-  font-weight: 500;
+  font-family: var(--font-fam);
+  font-weight: 600;
 }
 
 .title {
@@ -94,7 +93,7 @@ html {
   color: var(--medium);
   font-size: 2.3rem;
   font-weight: 300;
-  font-family: "Cinzel", serif;
+  font-family: 'Cinzel', serif;
 }
 
 .btn-tweet {
@@ -137,7 +136,7 @@ html {
 
   /* Styles added */
   display: inline-block;
-  content: "";
+  content: '';
 
   /* Use padding to vertical align the line */
   /* Use padding in em for a responsive icon height */
