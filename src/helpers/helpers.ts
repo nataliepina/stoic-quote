@@ -1,5 +1,5 @@
 // Allow for text to be copyable
-export const copyText = (value: string) => {
+export const copyText = (value: string): void => {
   const dummy = document.createElement('input');
   document.body.appendChild(dummy);
   dummy.setAttribute('value', value);

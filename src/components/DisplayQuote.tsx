@@ -3,16 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
+type QuoteProps = {
+  quote: QuoteData | null;
+};
+
 interface QuoteData {
   quote: string;
   author: string;
 }
 
-type Props = {
-  quote: QuoteData | null;
-};
-
-const DisplayQuote: React.FC<Props> = ({ quote }) => {
+const DisplayQuote = ({ quote }: QuoteProps): JSX.Element => {
   return (
     <>
       <div className="line-container">

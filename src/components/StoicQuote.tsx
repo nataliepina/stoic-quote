@@ -36,7 +36,8 @@ const StoicQuote: React.FC = () => {
   const newQuoteText = 'New Quote';
 
   useEffect(() => {
-    const stoicQuote = require('stoic-quotes');
+    //es-
+    const stoicQuote = require('stoic-quotes'); // eslint-disable-line @typescript-eslint/no-var-requires
 
     const getQuote = async () => {
       try {

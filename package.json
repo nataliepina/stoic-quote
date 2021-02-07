@@ -37,8 +37,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint './src/**/*.{js,jsx}'",
-    "lint:fix": "eslint './src/**/*.{js,jsx}' --fix"
+    "lint": "eslint './src/**/*.{jsx,tsx,ts}'",
+    "lint:fix": "eslint './src/**/*.{jsx,tsx,ts}' --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -72,6 +72,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-loader": "^4.0.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "husky": "^4.3.8",

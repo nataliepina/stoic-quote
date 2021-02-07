@@ -1,15 +1,15 @@
-import { render } from "@testing-library/react";
-import React from "react";
-import App from "../App";
+import { render } from '@testing-library/react';
+import React from 'react';
+import App from '../App';
 
-describe("App tests", () => {
-  it("should match snapshot", () => {
+describe('App tests', () => {
+  it('should match snapshot', () => {
     const { asFragment } = render(<App />);
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should render the title", () => {
+  it('should render the title', () => {
     const { getByText } = render(<App />);
-    expect(getByText("Stoic Quotes")).toBeInTheDocument();
+    expect(getByText('Stoic Quotes')).toBeInTheDocument();
   });
 });
