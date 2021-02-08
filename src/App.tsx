@@ -3,8 +3,8 @@ import './App.css';
 import Footer from './components/Footer';
 import StoicQuote from './components/StoicQuote';
 
-const App: React.FC = () => {
-  const title = 'Stoic Quotes';
+const App: React.FC = (): JSX.Element => {
+  const title: string = 'Stoic Quotes';
   return (
     <div className="app">
       <h1 className="title">{title}</h1>
