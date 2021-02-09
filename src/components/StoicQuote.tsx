@@ -7,8 +7,8 @@ import styled from 'styled-components';
 import { copyText } from '../helpers/helpers';
 import DisplayQuote from './DisplayQuote';
 interface QuoteData {
-  quote?: string;
-  author?: string;
+  quote: string;
+  author: string;
 }
 
 export const Button = styled.button`
@@ -28,12 +28,12 @@ export const Button = styled.button`
   }
 `;
 
-const StoicQuote: React.FC = (): JSX.Element => {
+const StoicQuote = (): JSX.Element => {
   const [quote, setQuote] = useState<QuoteData | null>(null);
   const [loading, setLoading] = useState(true);
   const [toolTip, setToolTip] = useState('Copy');
   const text = useRef('');
-  const newQuoteText: string = 'New Quote';
+  const newQuoteText = 'New Quote';
 
   useEffect(() => {
     const stoicQuote = require('stoic-quotes'); // eslint-disable-line @typescript-eslint/no-var-requires
