@@ -2,7 +2,7 @@
 
 exports[`App tests should match snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="app"
   >
     <h1
@@ -13,7 +13,7 @@ exports[`App tests should match snapshot 1`] = `
     <div
       class="quote"
     >
-      <main
+      <section
         class="main"
       >
         <div
@@ -111,7 +111,7 @@ exports[`App tests should match snapshot 1`] = `
             </circle>
           </svg>
         </div>
-      </main>
+      </section>
       <section
         class="btn-wrapper"
       >
@@ -169,6 +169,6 @@ exports[`App tests should match snapshot 1`] = `
         </a>
       </p>
     </footer>
-  </div>
+  </main>
 </DocumentFragment>
 `;

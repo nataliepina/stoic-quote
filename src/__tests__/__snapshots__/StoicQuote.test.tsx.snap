@@ -5,7 +5,7 @@ exports[`Stoic Quote tests should match snapshot 1`] = `
   <div
     class="quote"
   >
-    <main
+    <section
       class="main"
     >
       <div
@@ -103,7 +103,7 @@ exports[`Stoic Quote tests should match snapshot 1`] = `
           </circle>
         </svg>
       </div>
-    </main>
+    </section>
     <section
       class="btn-wrapper"
     >

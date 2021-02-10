@@ -6,11 +6,11 @@ import StoicQuote from './components/StoicQuote';
 const App: React.FC = (): JSX.Element => {
   const title = 'Stoic Quotes';
   return (
-    <div className="app">
+    <main className="app">
       <h1 className="title">{title}</h1>
       <StoicQuote />
       <Footer />
-    </div>
+    </main>
   );
 };
 

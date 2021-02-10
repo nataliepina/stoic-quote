@@ -69,13 +69,13 @@ const StoicQuote = (): JSX.Element => {
   return (
     <>
       <div className="quote">
-        <main className="main">
+        <section className="main">
           {loading ? (
             <Loader type="ThreeDots" color="lightgray" height={80} width={80} />
           ) : (
             <DisplayQuote quote={quote} />
           )}
-        </main>
+        </section>
         <section className="btn-wrapper">
           <Button onClick={getNewQuote}>{newQuoteText}</Button>
           <Button onClick={handleCopy}>{toolTip}</Button>
