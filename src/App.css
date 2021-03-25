@@ -70,6 +70,10 @@ html {
   font-family: var(--font-fam);
 }
 
+.author:before {
+  content: '— ';
+}
+
 .quote-container {
   margin: 2em auto;
   width: 90%;

@@ -23,7 +23,7 @@ const DisplayQuote = ({ quote }: QuoteProps): JSX.Element => {
 
       <div className="quote-container">
         <blockquote className="blockquote">{quote?.quote}</blockquote>
-        <cite className="author">- {quote?.author}</cite>
+        <cite className="author">{quote?.author}</cite>
       </div>
 
       <div className="line-container">
