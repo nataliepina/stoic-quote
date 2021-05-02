@@ -8,7 +8,6 @@ Stoicism is a philosophy of life, a practical guide to applying wisdom to your d
 
 ## Stoic Quotes
 
-Stoic quotes to inspiring living a more stoic life. Featuring teachings from Marcus Aurelius, Seneca, Epictetus, and more. I hope you enjoy! 
-
+Stoic quotes to inspiring living a more stoic life. Featuring teachings from Marcus Aurelius, Seneca, Epictetus, and more. I hope you enjoy!
 
 (Shout out to /r/Stoicism and The Daily Stoic by Ryan Holiday for inspiration)

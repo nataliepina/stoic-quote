@@ -51,8 +51,6 @@ html {
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
   place-items: center center;
   font-family: var(--font-fam);
   font-weight: 300;
