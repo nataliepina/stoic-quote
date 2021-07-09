@@ -39,7 +39,7 @@ export const Button = styled.button`
   font-family: 'Cinzel', serif;
 
   &:hover {
-    transition: all 0.8s;
+    transition: all 0.5s;
     color: ${({ theme: { colors } }) => colors.primary};
     transform: scale(1, 1);
   }
