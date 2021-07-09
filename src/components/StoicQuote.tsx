@@ -5,30 +5,57 @@ import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import styled from 'styled-components';
 import { copyText } from '../helpers/helpers';
-import DisplayQuote from './DisplayQuote';
-interface QuoteData {
-  quote: string;
-  author: string;
-}
+import DisplayQuote, { QuoteData } from './DisplayQuote';
+
+export const QuoteContainer = styled.div`
+  width: 75vw;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  place-items: center center;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  padding: 2.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+`;
+
+export const ButtonWrapper = styled.div`
+  margin: ${({ theme: { sizes } }) => sizes.xl} auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: ${({ theme: { sizes } }) => sizes.md};
+  font-family: 'Fraunces', serif;
+`;
 
 export const Button = styled.button`
-  display: inline-block;
   cursor: pointer;
-  margin: 0.25rem 0.5rem;
   padding: 0.25rem 0.75rem;
-  background-color: black;
-  color: hsl(202, 5%, 69%);
-  font-size: 1.25rem;
-  border: 2px solid hsl(202, 5%, 69%);
+  background-color: ${({ theme: { colors } }) => colors.dark};
+  color: ${({ theme: { colors } }) => colors.light};
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
+  border: 2px solid ${({ theme: { colors } }) => colors.light};
+  font-family: 'Cinzel', serif;
 
   &:hover {
     transition: all 0.8s;
-    color: white;
+    color: ${({ theme: { colors } }) => colors.primary};
     transform: scale(1, 1);
+  }
+
+  a {
+    color: ${({ theme: { colors } }) => colors.light};
+
+    &:hover {
+      transition: all 0.6s;
+      color: ${({ theme: { colors } }) => colors.primary};
+      transform: scale(1, 1);
+    }
   }
 `;
 
-const StoicQuote = (): JSX.Element => {
+const StoicQuote = (): React.ReactElement => {
   const [quote, setQuote] = useState<QuoteData | null>(null);
   const [loading, setLoading] = useState(true);
   const [toolTip, setToolTip] = useState('Copy');
@@ -36,7 +63,8 @@ const StoicQuote = (): JSX.Element => {
   const newQuoteText = 'New Quote';
 
   useEffect(() => {
-    const stoicQuote = require('stoic-quotes'); // eslint-disable-line @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const stoicQuote = require('stoic-quotes');
 
     const getQuote = async () => {
       try {
@@ -68,15 +96,15 @@ const StoicQuote = (): JSX.Element => {
 
   return (
     <>
-      <div className="quote">
-        <section className="main">
+      <QuoteContainer>
+        <section>
           {loading ? (
             <Loader type="ThreeDots" color="lightgray" height={80} width={80} />
           ) : (
             <DisplayQuote quote={quote} />
           )}
         </section>
-        <section className="btn-wrapper">
+        <ButtonWrapper>
           <Button onClick={getNewQuote}>{newQuoteText}</Button>
           <Button onClick={handleCopy}>{toolTip}</Button>
           <Button>
@@ -86,13 +114,12 @@ const StoicQuote = (): JSX.Element => {
               href={`https://twitter.com/intent/tweet?text=${text.current}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-tweet"
             >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </Button>
-        </section>
-      </div>
+        </ButtonWrapper>
+      </QuoteContainer>
     </>
   );
 };

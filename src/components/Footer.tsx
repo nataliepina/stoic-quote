@@ -1,11 +1,32 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Footer: React.FC = (): JSX.Element => {
-  const copyright = 'Natalie Pina \u00A9 2021';
+interface FooterProps {
+  copyright?: string;
+}
+const FooterContainer = styled.footer`
+  width: 100%;
+  color: ${({ theme: { colors } }) => colors.light};
+  font-size: 1rem;
+`;
 
+const Copyright = styled.p`
+  a {
+    text-decoration: none;
+    color: ${({ theme: { colors } }) => colors.light};
+
+    &:hover {
+      color: ${({ theme: { colors } }) => colors.primary};
+    }
+  }
+`;
+
+const Footer: React.FC<FooterProps> = ({
+  copyright,
+}: FooterProps): React.ReactElement => {
   return (
-    <footer className="footer">
-      <p>
+    <FooterContainer>
+      <Copyright>
         <a
           data-testid="footer"
           href="https://github.com/nataliepina/stoic-quote"
@@ -14,8 +35,8 @@ const Footer: React.FC = (): JSX.Element => {
         >
           {copyright}
         </a>
-      </p>
-    </footer>
+      </Copyright>
+    </FooterContainer>
   );
 };
 
