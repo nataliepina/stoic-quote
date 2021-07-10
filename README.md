@@ -1,6 +1,6 @@
 # A Collection of Stoic Quotes
 
-[Live Demo](https://frosty-haibt-d4366c.netlify.app/)
+[Live Demo](https://stoic-quote-app.netlify.app/)
 
 ## What is Modern Stoicism?
 
