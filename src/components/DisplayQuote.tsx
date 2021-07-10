@@ -18,14 +18,17 @@ const QuoteWrapper = styled.div`
   padding: ${({ theme: { sizes } }) => sizes.xxl};
   width: 90%;
   color: ${({ theme: { colors } }) => colors.light};
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.lg};
 `;
 
 const BlockQuote = styled.blockquote`
   text-align: center;
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.lg};
 `;
 
 const Citation = styled.cite`
+  padding: ${({ theme: { sizes } }) => sizes.sm};
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
+
   &:before {
     content: '— ';
   }

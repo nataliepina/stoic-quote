@@ -10,10 +10,11 @@ const theme = {
   },
   fonts: ['Fraunces', 'sans-serif'],
   fontSizes: {
-    sm: '.75em',
+    sm: '.8em',
     base: '1em',
-    md: '2em',
-    lg: '3em',
+    md: '1.8em',
+    lg: '2.8em',
+    xl: '3em',
   },
   sizes: {
     sm: '8px',
