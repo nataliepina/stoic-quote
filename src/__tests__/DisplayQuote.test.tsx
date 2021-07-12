@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import DisplayQuote from '../components/DisplayQuote';
+import Quote from '../components/Quote';
 
-describe('DisplayQuote tests', () => {
+describe('Quote tests', () => {
   interface QuoteData {
     quote: string;
     author: string;
@@ -11,16 +11,16 @@ describe('DisplayQuote tests', () => {
   const quote: QuoteData = { quote: 'testing', author: 'the tester' };
 
   it('should render without breaking', () => {
-    render(<DisplayQuote quote={quote} />);
+    render(<Quote quote={quote} />);
   });
 
   it('should match snapshot', () => {
-    const { asFragment } = render(<DisplayQuote quote={quote} />);
+    const { asFragment } = render(<Quote quote={quote} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render quote text and author', () => {
-    const { getByText } = render(<DisplayQuote quote={quote} />);
+    const { getByText } = render(<Quote quote={quote} />);
     expect(getByText('testing')).toBeInTheDocument();
     expect(getByText('- the tester')).toBeInTheDocument();
   });

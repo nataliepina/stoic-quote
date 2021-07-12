@@ -15,14 +15,18 @@ export interface QuoteData {
 
 const QuoteWrapper = styled.div`
   margin: 0 auto;
-  padding: ${({ theme: { sizes } }) => sizes.xxl};
+  padding: ${({ theme: { sizes } }) => sizes.md};
   width: 90%;
   color: ${({ theme: { colors } }) => colors.light};
+
+  @media (min-width: 768px) {
+    padding: ${({ theme: { sizes } }) => sizes.xxl};
+  }
 `;
 
 const BlockQuote = styled.blockquote`
   text-align: center;
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.lg};
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
 `;
 
 const Citation = styled.cite`
@@ -63,7 +67,7 @@ const Line = styled.div`
   }
 `;
 
-const DisplayQuote = ({ quote }: QuoteProps): JSX.Element => {
+const Quote = ({ quote }: QuoteProps): JSX.Element => {
   return (
     <>
       <Line>
@@ -82,4 +86,4 @@ const DisplayQuote = ({ quote }: QuoteProps): JSX.Element => {
   );
 };
 
-export default DisplayQuote;
+export default Quote;

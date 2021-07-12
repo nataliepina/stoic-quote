@@ -1,23 +1,25 @@
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faCopy, faRedo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import styled from 'styled-components';
 import { copyText } from '../helpers/helpers';
-import DisplayQuote, { QuoteData } from './DisplayQuote';
+import Quote, { QuoteData } from './Quote';
 
-export const QuoteContainer = styled.div`
+export const MainContainer = styled.div`
   width: 75vw;
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
   place-items: center center;
-  font-family: 'Fraunces', serif;
-  font-weight: 300;
-  padding: 2.5rem 0;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: ${({ theme: { fonts } }) => fonts.primary};
+  padding: 0.5rem 0;
+
+  @media (min-width: 768px) {
+    padding: 2.5rem 0;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -26,7 +28,11 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: ${({ theme: { sizes } }) => sizes.md};
-  font-family: 'Fraunces', serif;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Button = styled.button`
@@ -34,9 +40,9 @@ export const Button = styled.button`
   padding: 0.25rem 0.75rem;
   background-color: ${({ theme: { colors } }) => colors.dark};
   color: ${({ theme: { colors } }) => colors.light};
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
   border: 2px solid ${({ theme: { colors } }) => colors.light};
-  font-family: 'Cinzel', serif;
+  font-family: ${({ theme: { fonts } }) => fonts.secondary};
 
   &:hover {
     transition: all 0.8s;
@@ -53,14 +59,20 @@ export const Button = styled.button`
       transform: scale(1, 1);
     }
   }
+
+  svg {
+    font-size: 20px;
+    margin-left: 10px;
+  }
 `;
 
-const StoicQuote = (): React.ReactElement => {
+const QuoteContainer = (): React.ReactElement => {
   const [quote, setQuote] = useState<QuoteData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [toolTip, setToolTip] = useState('Copy');
   const text = useRef('');
   const newQuoteText = 'New Quote';
+  const tweetQuote = 'Tweet';
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -77,7 +89,9 @@ const StoicQuote = (): React.ReactElement => {
       } catch (e) {
         setQuote(null);
       } finally {
-        setTimeout(() => setLoading(false), 500);
+        // setLoading(false);
+        // Use below to see loading state
+        setTimeout(() => setLoading(false), 300);
       }
     };
     if (!quote) getQuote();
@@ -95,33 +109,38 @@ const StoicQuote = (): React.ReactElement => {
   };
 
   return (
-    <>
-      <QuoteContainer>
-        <section>
-          {loading ? (
-            <Loader type="ThreeDots" color="lightgray" height={80} width={80} />
-          ) : (
-            <DisplayQuote quote={quote} />
-          )}
-        </section>
-        <ButtonWrapper>
-          <Button onClick={getNewQuote}>{newQuoteText}</Button>
-          <Button onClick={handleCopy}>{toolTip}</Button>
-          <Button>
-            <a
-              id="tweet-quote"
-              title="Tweet This Quote!"
-              href={`https://twitter.com/intent/tweet?text=${text.current}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-          </Button>
-        </ButtonWrapper>
-      </QuoteContainer>
-    </>
+    <MainContainer>
+      <section>
+        {loading ? (
+          <Loader type="ThreeDots" color="lightgray" height={80} width={80} />
+        ) : (
+          <Quote quote={quote} />
+        )}
+      </section>
+      <ButtonWrapper>
+        <Button onClick={getNewQuote}>
+          {newQuoteText}
+          <FontAwesomeIcon icon={faRedo} />
+        </Button>
+        <Button onClick={handleCopy}>
+          {toolTip}
+          <FontAwesomeIcon icon={faCopy} />
+        </Button>
+        <Button>
+          {tweetQuote}
+          <a
+            id="tweet-quote"
+            title="Tweet This Quote!"
+            href={`https://twitter.com/intent/tweet?text=${text.current}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+        </Button>
+      </ButtonWrapper>
+    </MainContainer>
   );
 };
 
-export default StoicQuote;
+export default QuoteContainer;

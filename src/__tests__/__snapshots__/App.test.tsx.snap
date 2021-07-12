@@ -3,19 +3,17 @@
 exports[`App tests should match snapshot 1`] = `
 <DocumentFragment>
   <main
-    class="app"
+    class="sc-jrAGrp ekdUVD"
   >
     <h1
-      class="title"
+      class="sc-pFZIQ jJYcpO"
     >
       Stoic Quotes
     </h1>
     <div
-      class="quote"
+      class="sc-gKsewC wJXgy"
     >
-      <section
-        class="main"
-      >
+      <section>
         <div
           aria-busy="true"
           class=""
@@ -112,24 +110,54 @@ exports[`App tests should match snapshot 1`] = `
           </svg>
         </div>
       </section>
-      <section
-        class="btn-wrapper"
+      <div
+        class="sc-iBPRYJ bBKMEu"
       >
         <button
-          class="sc-bdfBwQ ldRByT"
+          class="sc-fubCfw fMmsBq"
         >
           New Quote
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-redo fa-w-16 "
+            data-icon="redo"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M500.33 0h-47.41a12 12 0 0 0-12 12.57l4 82.76A247.42 247.42 0 0 0 256 8C119.34 8 7.9 119.53 8 256.19 8.1 393.07 119.1 504 256 504a247.1 247.1 0 0 0 166.18-63.91 12 12 0 0 0 .48-17.43l-34-34a12 12 0 0 0-16.38-.55A176 176 0 1 1 402.1 157.8l-101.53-4.87a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12h200.33a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12z"
+              fill="currentColor"
+            />
+          </svg>
         </button>
         <button
-          class="sc-bdfBwQ ldRByT"
+          class="sc-fubCfw fMmsBq"
         >
           Copy
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-copy fa-w-14 "
+            data-icon="copy"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"
+              fill="currentColor"
+            />
+          </svg>
         </button>
         <button
-          class="sc-bdfBwQ ldRByT"
+          class="sc-fubCfw fMmsBq"
         >
+          Tweet
           <a
-            class="btn-tweet"
             href="https://twitter.com/intent/tweet?text="
             id="tweet-quote"
             rel="noopener noreferrer"
@@ -153,12 +181,14 @@ exports[`App tests should match snapshot 1`] = `
             </svg>
           </a>
         </button>
-      </section>
+      </div>
     </div>
     <footer
-      class="footer"
+      class="sc-bdfBwQ jgzbvu"
     >
-      <p>
+      <p
+        class="sc-gsTCUz eafuQB"
+      >
         <a
           data-testid="footer"
           href="https://github.com/nataliepina/stoic-quote"
