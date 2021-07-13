@@ -6,6 +6,7 @@ import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import styled from 'styled-components';
 import { copyText } from '../helpers/helpers';
+import Button from './Button';
 import Quote, { QuoteData } from './Quote';
 
 export const MainContainer = styled.div`
@@ -32,37 +33,6 @@ export const ButtonWrapper = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-  }
-`;
-
-export const Button = styled.button`
-  cursor: pointer;
-  padding: 0.25rem 0.75rem;
-  background-color: ${({ theme: { colors } }) => colors.dark};
-  color: ${({ theme: { colors } }) => colors.light};
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
-  border: 2px solid ${({ theme: { colors } }) => colors.light};
-  font-family: ${({ theme: { fonts } }) => fonts.secondary};
-
-  &:hover {
-    transition: all 0.8s;
-    color: ${({ theme: { colors } }) => colors.primary};
-    transform: scale(1, 1);
-  }
-
-  a {
-    color: ${({ theme: { colors } }) => colors.light};
-
-    &:hover {
-      transition: all 0.6s;
-      color: ${({ theme: { colors } }) => colors.primary};
-      transform: scale(1, 1);
-    }
-  }
-
-  svg {
-    font-size: 20px;
-    margin-left: 10px;
   }
 `;
 
@@ -119,15 +89,15 @@ const QuoteContainer = (): React.ReactElement => {
       </section>
       <ButtonWrapper>
         <Button onClick={getNewQuote}>
-          {newQuoteText}
+          <span>{newQuoteText}</span>
           <FontAwesomeIcon icon={faRedo} />
         </Button>
         <Button onClick={handleCopy}>
-          {toolTip}
+          <span>{toolTip}</span>
           <FontAwesomeIcon icon={faCopy} />
         </Button>
         <Button>
-          {tweetQuote}
+          <span>{tweetQuote}</span>
           <a
             id="tweet-quote"
             title="Tweet This Quote!"
