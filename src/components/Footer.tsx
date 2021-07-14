@@ -8,6 +8,7 @@ const FooterContainer = styled.footer`
   width: 100%;
   color: ${({ theme: { colors } }) => colors.light};
   font-size: 1rem;
+  padding: 5px;
 `;
 
 const Copyright = styled.p`

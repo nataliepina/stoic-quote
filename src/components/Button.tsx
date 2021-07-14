@@ -8,7 +8,7 @@ interface ButtonProps {
 
 export const Btn = styled.button`
   cursor: pointer;
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   background-color: ${({ theme: { colors } }) => colors.dark};
   color: ${({ theme: { colors } }) => colors.light};
   font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
