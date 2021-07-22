@@ -9,12 +9,12 @@ interface ButtonProps {
 export const Btn = styled.button`
   cursor: pointer;
   padding: 0.5rem 0.75rem;
-  background-color: ${({ theme: { colors } }) => colors.dark};
+  background-color: transparent;
   color: ${({ theme: { colors } }) => colors.light};
   font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
-  border: 2px solid ${({ theme: { colors } }) => colors.light};
+  border: 2px solid currentColor;
   font-family: ${({ theme: { fonts } }) => fonts.secondary};
-  min-width: 50px;
+  min-width: 60px;
 
   &:hover {
     transition: all 0.8s;
@@ -23,7 +23,7 @@ export const Btn = styled.button`
     border: 2px solid ${({ theme: { colors } }) => colors.primary};
   }
 
-  span {
+  .btn-txt {
     margin-right: 8px;
   }
 

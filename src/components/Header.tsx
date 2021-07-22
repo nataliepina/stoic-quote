@@ -22,7 +22,11 @@ export const HeaderContainer = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  position: absolute;
+  position: relative;
+
+  @media (min-width: 768px) {
+    position: absolute;
+  }
 `;
 
 const Header: React.FC<HeaderProps> = (
@@ -41,9 +45,11 @@ const Header: React.FC<HeaderProps> = (
     <HeaderContainer>
       <ButtonWrapper>
         <Button onClick={setLightTheme}>
+          <span role="button" aria-label="Light Mode"></span>
           <FontAwesomeIcon icon={faLightbulb} />
         </Button>
         <Button onClick={setDarkTheme}>
+          <span role="button" aria-label="Dark Mode"></span>
           <FontAwesomeIcon icon={faCloudMoon} />
         </Button>
       </ButtonWrapper>

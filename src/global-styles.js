@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
     background: ${({ theme: { colors } }) => colors.body};
     color: ${({ theme: { colors } }) => colors.text};
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   `;
 
 export default GlobalStyles;

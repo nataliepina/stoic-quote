@@ -89,15 +89,15 @@ const QuoteContainer = (): React.ReactElement => {
       </section>
       <ButtonWrapper>
         <Button onClick={getNewQuote}>
-          <span>{newQuoteText}</span>
+          <span className="btn-txt">{newQuoteText}</span>
           <FontAwesomeIcon icon={faRedo} />
         </Button>
         <Button onClick={handleCopy}>
-          <span>{toolTip}</span>
+          <span className="btn-txt">{toolTip}</span>
           <FontAwesomeIcon icon={faCopy} />
         </Button>
         <Button>
-          <span>{tweetQuote}</span>
+          <span className="btn-txt">{tweetQuote}</span>
           <a
             id="tweet-quote"
             title="Tweet This Quote!"
