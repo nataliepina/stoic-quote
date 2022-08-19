@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
 import './App.css';
+
+import React, { useState } from 'react';
+
+import styled, { ThemeProvider } from 'styled-components';
+
 import Footer from './components/Footer';
 import Header from './components/Header';
 import StoicQuote from './components/QuoteContainer';
 import GlobalStyles from './global-styles';
 import { theme as primaryTheme } from './Theme';
+
 export const Container = styled.main`
   text-align: center;
   height: 100vh;
@@ -18,7 +22,7 @@ export const Container = styled.main`
 
 const App = (): React.ReactElement => {
   const title = 'Stoic Quotes';
-  const copyright = 'Natalie Pina \u00A9 2021';
+  const copyright = 'Natalie Pina \u00A9 2022';
 
   const [theme, setTheme] = useState(primaryTheme);
 

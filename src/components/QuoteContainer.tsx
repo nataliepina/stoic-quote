@@ -1,10 +1,10 @@
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faCopy, faRedo } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useRef, useState } from 'react';
-import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+
+import React, { useEffect, useRef, useState } from 'react';
+
+import Loader from 'react-loader-spinner';
 import styled from 'styled-components';
+
 import { copyText } from '../helpers/helpers';
 import Button from './Button';
 import Quote, { QuoteData } from './Quote';
@@ -90,14 +90,11 @@ const QuoteContainer = (): React.ReactElement => {
       <ButtonWrapper>
         <Button onClick={getNewQuote}>
           <span className="btn-txt">{newQuoteText}</span>
-          <FontAwesomeIcon icon={faRedo} />
         </Button>
         <Button onClick={handleCopy}>
           <span className="btn-txt">{toolTip}</span>
-          <FontAwesomeIcon icon={faCopy} />
         </Button>
         <Button>
-          <span className="btn-txt">{tweetQuote}</span>
           <a
             id="tweet-quote"
             title="Tweet This Quote!"
@@ -105,7 +102,7 @@ const QuoteContainer = (): React.ReactElement => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} />
+            <span className="btn-txt">{tweetQuote}</span>
           </a>
         </Button>
       </ButtonWrapper>

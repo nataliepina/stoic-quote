@@ -1,7 +1,7 @@
-import { faCloudMoon, faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+
 import styled from 'styled-components';
+
 import { secondaryTheme, theme as primaryTheme, Theme } from '../Theme';
 import Button from './Button';
 
@@ -46,11 +46,11 @@ const Header: React.FC<HeaderProps> = (
       <ButtonWrapper>
         <Button onClick={setLightTheme}>
           <span role="button" aria-label="Light Mode"></span>
-          <FontAwesomeIcon icon={faLightbulb} />
+          put icon here
         </Button>
         <Button onClick={setDarkTheme}>
           <span role="button" aria-label="Dark Mode"></span>
-          <FontAwesomeIcon icon={faCloudMoon} />
+          put icon here
         </Button>
       </ButtonWrapper>
       <HeaderTitle>{title}</HeaderTitle>

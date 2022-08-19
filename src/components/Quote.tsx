@@ -1,7 +1,7 @@
-import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+
+import React from 'react';
+
 import styled from 'styled-components';
 
 type QuoteProps = {
@@ -70,18 +70,14 @@ const Line = styled.div`
 const Quote = ({ quote }: QuoteProps): JSX.Element => {
   return (
     <>
-      <Line>
-        <FontAwesomeIcon icon={faQuoteLeft} />
-      </Line>
+      <Line>Icon Left</Line>
 
       <QuoteWrapper>
         <BlockQuote>{quote?.quote}</BlockQuote>
         <Citation>{quote?.author}</Citation>
       </QuoteWrapper>
 
-      <Line>
-        <FontAwesomeIcon icon={faQuoteRight} />
-      </Line>
+      <Line>Icon right</Line>
     </>
   );
 };

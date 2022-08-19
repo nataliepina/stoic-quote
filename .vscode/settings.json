@@ -2,16 +2,11 @@
   "cSpell.words": [
     "Pina",
     "fontawesome",
-    "fortawesome",
     "testid"
   ],
-  "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-  },
   "editor.formatOnSave": true,
   "files.trimTrailingWhitespace": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.packageManager": "npm",
   "tslint.jsEnable": true,
   "tslint.suppressWhileTypeErrorsPresent": true,
   "typescript.referencesCodeLens.enabled": true,
