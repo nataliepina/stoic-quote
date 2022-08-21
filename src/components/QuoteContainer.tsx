@@ -2,7 +2,8 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-import Loader from 'react-loader-spinner';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { ThreeDots } from 'react-loader-spinner';
 import styled from 'styled-components';
 
 import { copyText } from '../helpers/helpers';
@@ -17,10 +18,19 @@ export const MainContainer = styled.div`
   place-items: center center;
   font-family: ${({ theme: { fonts } }) => fonts.primary};
   padding: 0.5rem 0;
+  color: ${({ theme: { colors } }) => colors.light};
 
   @media (min-width: 768px) {
     padding: 2.5rem 0;
   }
+`;
+
+export const ActionButtonsWrapper = styled.div`
+  margin: ${({ theme: { sizes } }) => sizes.xl} auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: ${({ theme: { sizes } }) => sizes.md};
 `;
 
 export const ButtonWrapper = styled.div`
@@ -33,6 +43,35 @@ export const ButtonWrapper = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
+  }
+`;
+
+const Line = styled.div`
+  text-align: center;
+  color: ${({ theme: { colors } }) => colors.light};
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
+
+  &:before,
+  &:after {
+    color: ${({ theme: { colors } }) => colors.light};
+    width: 300px;
+    height: 1px;
+
+    /* Changed to border-top (instead of border) to simulate a line better */
+    border-top: 2px solid #ccc;
+
+    /* Styles added */
+    display: inline-block;
+    content: '';
+
+    /* Use padding to vertical align the line */
+    /* Use padding in em for a responsive icon height */
+    padding-top: 0.5em;
+
+    /* Use margins to give the lines some space around the icon */
+    /* Use margins in % for a responsive space */
+    margin-left: 5%;
+    margin-right: 5%;
   }
 `;
 
@@ -81,19 +120,26 @@ const QuoteContainer = (): React.ReactElement => {
   return (
     <MainContainer>
       <section>
+        <FaQuoteLeft />
         {loading ? (
-          <Loader type="ThreeDots" color="lightgray" height={80} width={80} />
+          <ThreeDots
+            height="80"
+            width="80"
+            radius="9"
+            color="currentColor"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            visible={true}
+          />
         ) : (
           <Quote quote={quote} />
         )}
+
+        <FaQuoteRight />
       </section>
-      <ButtonWrapper>
-        <Button onClick={getNewQuote}>
-          <span className="btn-txt">{newQuoteText}</span>
-        </Button>
-        <Button onClick={handleCopy}>
-          <span className="btn-txt">{toolTip}</span>
-        </Button>
+      <ActionButtonsWrapper>
+        <Button onClick={getNewQuote}>{newQuoteText}</Button>
+        <Button onClick={handleCopy}>{toolTip}</Button>
         <Button>
           <a
             id="tweet-quote"
@@ -102,10 +148,10 @@ const QuoteContainer = (): React.ReactElement => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="btn-txt">{tweetQuote}</span>
+            {tweetQuote}
           </a>
         </Button>
-      </ButtonWrapper>
+      </ActionButtonsWrapper>
     </MainContainer>
   );
 };

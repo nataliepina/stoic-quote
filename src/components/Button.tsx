@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled from 'styled-components';
 
 interface ButtonProps {
@@ -11,16 +12,16 @@ export const Btn = styled.button`
   padding: 0.5rem 0.75rem;
   background-color: transparent;
   color: ${({ theme: { colors } }) => colors.light};
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
-  border: 2px solid currentColor;
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.xs};
+  font-weight: bold;
+  border: 1px solid currentColor;
   font-family: ${({ theme: { fonts } }) => fonts.secondary};
   min-width: 60px;
 
   &:hover {
     transition: all 0.8s;
-    color: ${({ theme: { colors } }) => colors.primary};
-    transform: scale(1, 1);
-    border: 2px solid ${({ theme: { colors } }) => colors.primary};
+    transform: scale(1.1);
+    border: 1px solid inherit;
   }
 
   .btn-txt {
@@ -28,12 +29,12 @@ export const Btn = styled.button`
   }
 
   a {
-    color: ${({ theme: { colors } }) => colors.light};
+    color: inherit;
+    text-decoration: none;
 
     &:hover {
       transition: all 0.6s;
-      color: ${({ theme: { colors } }) => colors.primary};
-      transform: scale(1, 1);
+      transform: scale(1.1);
     }
   }
 
@@ -42,10 +43,7 @@ export const Btn = styled.button`
   }
 `;
 
-const Button: React.FC<ButtonProps> = ({
-  onClick,
-  children,
-}: ButtonProps): React.ReactElement => {
+const Button = ({ onClick, children }: ButtonProps): React.ReactElement => {
   return <Btn onClick={onClick}>{children}</Btn>;
 };
 

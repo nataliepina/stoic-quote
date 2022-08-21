@@ -1,43 +1,11 @@
 import baseStyled, { ThemedStyledInterface } from 'styled-components';
 
-// interface ThemeProps {
-//   theme: {
-//     colors: {
-//       light: string;
-//       med: string;
-//       dark: string;
-//       primary: string;
-//       body: string;
-//       text: string;
-//     };
-//     fonts: {
-//       primary: string;
-//       secondary: string;
-//     };
-//     fontSizes: {
-//       sm: string;
-//       base: string;
-//       md: string;
-//       lg: string;
-//       xl: string;
-//     };
-//     sizes: {
-//       sm: string;
-//       md: string;
-//       lg: string;
-//       xl: string;
-//       xxl: string;
-//     };
-//   };
-//   children?: React.ReactNode;
-// }
-
 export const theme = {
   colors: {
-    light: '#e2e8ec',
+    light: '#f6f6f6',
     med: '#AAB8C2',
     dark: '#0a0c0e',
-    primary: '#a7deec',
+    primary: '#963d72',
     body: '#0a0c0e',
     text: '#e2e8ec',
   },
@@ -53,6 +21,7 @@ export const theme = {
     xl: '2.8em',
   },
   sizes: {
+    xs: '4px',
     sm: '8px',
     md: '16px',
     lg: '24px',
@@ -65,9 +34,9 @@ export const secondaryTheme = {
   colors: {
     light: '#0a0c0e',
     med: '#AAB8C2',
-    dark: '#e2e8ec',
-    primary: '#20778d',
-    body: '#e2e8ec',
+    dark: '#d2d7db',
+    primary: '#850f55',
+    body: '#d1d7da',
     text: '#0a0c0e',
   },
   fonts: {
@@ -82,6 +51,37 @@ export const secondaryTheme = {
     xl: '2.8em',
   },
   sizes: {
+    xs: '4px',
+    sm: '8px',
+    md: '16px',
+    lg: '24px',
+    xl: '48px',
+    xxl: '70px',
+  },
+};
+
+export const marbleTheme = {
+  colors: {
+    light: '#4C2f21',
+    med: '#D6C9BD',
+    dark: '#1b130f',
+    primary: '#606060',
+    body: '#d2ccc7',
+    text: '#161515',
+  },
+  fonts: {
+    primary: 'Fraunces',
+    secondary: 'Cinzel',
+  },
+  fontSizes: {
+    sm: '.8em',
+    base: '1em',
+    md: '1.3em',
+    lg: '2em',
+    xl: '2.8em',
+  },
+  sizes: {
+    xs: '4px',
     sm: '8px',
     md: '16px',
     lg: '24px',

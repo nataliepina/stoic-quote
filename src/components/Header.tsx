@@ -2,7 +2,12 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { secondaryTheme, theme as primaryTheme, Theme } from '../Theme';
+import {
+  marbleTheme,
+  secondaryTheme,
+  theme as primaryTheme,
+  Theme,
+} from '../Theme';
 import Button from './Button';
 
 interface HeaderProps {
@@ -10,7 +15,7 @@ interface HeaderProps {
   title: string;
 }
 export const HeaderTitle = styled.h1`
-  margin: 0.75rem auto 0;
+  margin: 2rem auto 0;
   color: ${({ theme: { colors } }) => colors.light};
   font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
   font-weight: 300;
@@ -19,26 +24,30 @@ export const HeaderTitle = styled.h1`
 
 export const HeaderContainer = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 export const ButtonWrapper = styled.div`
-  position: relative;
+  display: flex;
+  gap: ${({ theme: { sizes } }) => sizes.md};
+  flex-direction: column;
 
   @media (min-width: 768px) {
     position: absolute;
   }
 `;
 
-const Header: React.FC<HeaderProps> = (
-  props: HeaderProps
-): React.ReactElement => {
+const Header = (props: HeaderProps): React.ReactElement => {
   const { title } = props;
   function setLightTheme() {
     props.setTheme(secondaryTheme);
   }
-
   function setDarkTheme() {
     props.setTheme(primaryTheme);
+  }
+
+  function setStoneTheme() {
+    props.setTheme(marbleTheme);
   }
 
   return (
@@ -46,11 +55,15 @@ const Header: React.FC<HeaderProps> = (
       <ButtonWrapper>
         <Button onClick={setLightTheme}>
           <span role="button" aria-label="Light Mode"></span>
-          put icon here
+          Light Theme
         </Button>
         <Button onClick={setDarkTheme}>
           <span role="button" aria-label="Dark Mode"></span>
-          put icon here
+          Dark Theme
+        </Button>
+        <Button onClick={setStoneTheme}>
+          <span role="button" aria-label="Stone Mode"></span>
+          Marble Theme
         </Button>
       </ButtonWrapper>
       <HeaderTitle>{title}</HeaderTitle>

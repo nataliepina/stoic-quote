@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled from 'styled-components';
 
 interface FooterProps {
@@ -7,8 +8,9 @@ interface FooterProps {
 const FooterContainer = styled.footer`
   width: 100%;
   color: ${({ theme: { colors } }) => colors.light};
-  font-size: 1rem;
-  padding: 5px;
+  font-size: 0.8rem;
+  padding: 5px 0;
+  text-align: left;
 `;
 
 const Copyright = styled.p`
