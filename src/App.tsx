@@ -22,7 +22,7 @@ export const Container = styled.main`
 
 const App = (): React.ReactElement => {
   const title = 'Stoic Quote';
-  const copyright = 'Natalie Pina \u00A9 2022';
+  const copyright = 'Natalie Pina \u00A9 2023';
 
   const [theme, setTheme] = useState(primaryTheme);
 

@@ -2,12 +2,12 @@ import baseStyled, { ThemedStyledInterface } from 'styled-components';
 
 export const theme = {
   colors: {
-    light: '#f6f6f6',
-    med: '#AAB8C2',
+    light: '#ffffff',
+    med: '#000000',
     dark: '#0a0c0e',
     primary: '#963d72',
     body: '#0a0c0e',
-    text: '#e2e8ec',
+    text: '#f9f9f9',
   },
   fonts: {
     primary: 'Fraunces',
@@ -33,10 +33,10 @@ export const theme = {
 export const secondaryTheme = {
   colors: {
     light: '#0a0c0e',
-    med: '#AAB8C2',
+    med: '#ffffff',
     dark: '#d2d7db',
     primary: '#850f55',
-    body: '#d1d7da',
+    body: '#ffffff',
     text: '#0a0c0e',
   },
   fonts: {
