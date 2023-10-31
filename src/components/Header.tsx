@@ -1,20 +1,19 @@
 import React from 'react';
-
 import styled from 'styled-components';
-
+import { Button } from './Button';
 import {
-  marbleTheme,
-  secondaryTheme,
-  theme as primaryTheme,
   Theme,
+  marbleTheme,
+  theme as primaryTheme,
+  secondaryTheme,
 } from '../Theme';
-import Button from './Button';
 
 interface HeaderProps {
   setTheme: React.Dispatch<React.SetStateAction<Theme>>;
   title: string;
 }
-export const HeaderTitle = styled.h1`
+
+const HeaderTitle = styled.h1`
   margin: 2rem auto 0;
   color: ${({ theme: { colors } }) => colors.light};
   font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
@@ -22,12 +21,12 @@ export const HeaderTitle = styled.h1`
   font-family: ${({ theme: { fonts } }) => fonts.secondary};
 `;
 
-export const HeaderContainer = styled.div`
+const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.div`
   display: flex;
   gap: ${({ theme: { sizes } }) => sizes.md};
   flex-direction: column;
@@ -37,32 +36,30 @@ export const ButtonWrapper = styled.div`
   }
 `;
 
-const Header = (props: HeaderProps): React.ReactElement => {
-  const { title } = props;
-  function setLightTheme() {
-    props.setTheme(secondaryTheme);
-  }
-  function setDarkTheme() {
-    props.setTheme(primaryTheme);
-  }
-
-  function setStoneTheme() {
-    props.setTheme(marbleTheme);
-  }
+export const Header = ({ title, setTheme }: HeaderProps) => {
+  const switchTheme = (newTheme: Theme) => {
+    if (setTheme) setTheme(newTheme);
+  };
 
   return (
     <HeaderContainer>
       <ButtonWrapper>
-        <Button onClick={setLightTheme}>
-          <span role="button" aria-label="Light Mode"></span>
+        <Button
+          onClick={() => switchTheme(secondaryTheme)}
+          aria-label="Switch to Light Theme"
+        >
           Light Theme
         </Button>
-        <Button onClick={setDarkTheme}>
-          <span role="button" aria-label="Dark Mode"></span>
+        <Button
+          onClick={() => switchTheme(primaryTheme)}
+          aria-label="Switch to Dark Theme"
+        >
           Dark Theme
         </Button>
-        <Button onClick={setStoneTheme}>
-          <span role="button" aria-label="Stone Mode"></span>
+        <Button
+          onClick={() => switchTheme(marbleTheme)}
+          aria-label="Switch to Marble Theme"
+        >
           Marble Theme
         </Button>
       </ButtonWrapper>
@@ -70,5 +67,3 @@ const Header = (props: HeaderProps): React.ReactElement => {
     </HeaderContainer>
   );
 };
-
-export default Header;

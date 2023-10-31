@@ -7,8 +7,8 @@ import { ThreeDots } from 'react-loader-spinner';
 import styled from 'styled-components';
 
 import { copyText } from '../helpers/helpers';
-import Button from './Button';
-import Quote, { QuoteData } from './Quote';
+import { Button } from './Button';
+import { QuoteData, Quote } from './Quote';
 
 export const MainContainer = styled.div`
   width: 75vw;
@@ -46,42 +46,11 @@ export const ButtonWrapper = styled.div`
   }
 `;
 
-const Line = styled.div`
-  text-align: center;
-  color: ${({ theme: { colors } }) => colors.light};
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
-
-  &:before,
-  &:after {
-    color: ${({ theme: { colors } }) => colors.light};
-    width: 300px;
-    height: 1px;
-
-    /* Changed to border-top (instead of border) to simulate a line better */
-    border-top: 2px solid #ccc;
-
-    /* Styles added */
-    display: inline-block;
-    content: '';
-
-    /* Use padding to vertical align the line */
-    /* Use padding in em for a responsive icon height */
-    padding-top: 0.5em;
-
-    /* Use margins to give the lines some space around the icon */
-    /* Use margins in % for a responsive space */
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-`;
-
 const QuoteContainer = (): React.ReactElement => {
   const [quote, setQuote] = useState<QuoteData | null>(null);
   const [loading, setLoading] = useState(false);
   const [toolTip, setToolTip] = useState('Copy');
   const text = useRef('');
-  const newQuoteText = 'New Quote';
-  const tweetQuote = 'Tweet';
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -138,7 +107,7 @@ const QuoteContainer = (): React.ReactElement => {
         <FaQuoteRight />
       </section>
       <ActionButtonsWrapper>
-        <Button onClick={getNewQuote}>{newQuoteText}</Button>
+        <Button onClick={getNewQuote}>New Quote</Button>
         <Button onClick={handleCopy}>{toolTip}</Button>
         <Button>
           <a
@@ -148,7 +117,7 @@ const QuoteContainer = (): React.ReactElement => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {tweetQuote}
+            Tweet
           </a>
         </Button>
       </ActionButtonsWrapper>

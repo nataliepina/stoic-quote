@@ -24,9 +24,7 @@ const Copyright = styled.p`
   }
 `;
 
-const Footer: React.FC<FooterProps> = ({
-  copyright,
-}: FooterProps): React.ReactElement => {
+export const Footer = ({ copyright }: FooterProps): React.ReactElement => {
   return (
     <FooterContainer>
       <Copyright>
@@ -42,5 +40,3 @@ const Footer: React.FC<FooterProps> = ({
     </FooterContainer>
   );
 };
-
-export default Footer;

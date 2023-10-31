@@ -43,8 +43,9 @@ export const Btn = styled.button`
   }
 `;
 
-const Button = ({ onClick, children }: ButtonProps): React.ReactElement => {
+export const Button = ({
+  onClick,
+  children,
+}: ButtonProps): React.ReactElement => {
   return <Btn onClick={onClick}>{children}</Btn>;
 };
-
-export default Button;

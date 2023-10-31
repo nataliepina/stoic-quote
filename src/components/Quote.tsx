@@ -33,7 +33,7 @@ const Citation = styled.cite`
   }
 `;
 
-const Quote = ({ quote }: QuoteProps): JSX.Element => {
+export const Quote = ({ quote }: QuoteProps): JSX.Element => {
   return (
     <>
       <QuoteWrapper>
@@ -43,5 +43,3 @@ const Quote = ({ quote }: QuoteProps): JSX.Element => {
     </>
   );
 };
-
-export default Quote;

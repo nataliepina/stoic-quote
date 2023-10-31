@@ -2,7 +2,7 @@
 
 [Live Demo](https://nataliepina.github.io/stoic-quote/)
 
-This stoic quote generator allows users to generate quotes about Stocisim, copy quotes easily, and to share the quotes on Twitter.
+This stoic quote generator allows users to generate quotes about Stoicism, copy quotes easily, and to share the quotes on Twitter.
 
 ## What is Modern Stoicism?
 
