@@ -1,14 +1,11 @@
 import './App.css';
-
-import React, { useState } from 'react';
-
+import { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-
-import StoicQuote from './components/QuoteContainer';
 import GlobalStyles from './global-styles';
 import { theme as primaryTheme } from './Theme';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import StoicQuote from './components/QuoteContainer';
 
 export const Container = styled.main`
   text-align: center;

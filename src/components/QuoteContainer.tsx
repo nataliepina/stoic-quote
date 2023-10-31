@@ -1,6 +1,6 @@
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import { ThreeDots } from 'react-loader-spinner';
@@ -53,7 +53,6 @@ const QuoteContainer = (): React.ReactElement => {
   const text = useRef('');
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const stoicQuote = require('stoic-quotes');
 
     const getQuote = async () => {
@@ -67,8 +66,6 @@ const QuoteContainer = (): React.ReactElement => {
       } catch (e) {
         setQuote(null);
       } finally {
-        // setLoading(false);
-        // Use below to see loading state
         setTimeout(() => setLoading(false), 300);
       }
     };

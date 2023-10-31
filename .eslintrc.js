@@ -22,5 +22,7 @@ module.exports = {
   plugins: ['jsx-a11y', '@typescript-eslint'],
   rules: {
     'react/prop-types': 1,
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 };
