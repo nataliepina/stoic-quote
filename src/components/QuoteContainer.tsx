@@ -1,11 +1,7 @@
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-
 import { useEffect, useRef, useState } from 'react';
-
+import styled from 'styled-components';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import { ThreeDots } from 'react-loader-spinner';
-import styled from 'styled-components';
-
 import { copyText } from '../helpers/helpers';
 import { Button } from './Button';
 import { QuoteData, Quote } from './Quote';

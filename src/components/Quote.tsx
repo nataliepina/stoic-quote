@@ -1,4 +1,3 @@
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import styled from 'styled-components';
 
 type QuoteProps = {
