@@ -1,28 +1,21 @@
 name: Deploy
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Build project
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Install Dependencies 🔧
+        run: npm install
+      - name: Lint 🧹
+        run: npm run lint
+      - name: Build 🔨
         run: npm run build
-
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
@@ -34,14 +27,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-
     steps:
-      - name: Download artifact
+      - name: Download Artifact
         uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
