@@ -1,10 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import { ThreeDots } from 'react-loader-spinner';
 import { copyText } from '../helpers/helpers';
 import { Button } from './Button';
 import { QuoteData, Quote } from './Quote';
+// @ts-ignore
+import stoicQuote from 'stoic-quotes';
 
 export const MainContainer = styled.div`
   width: 75vw;
@@ -49,8 +51,6 @@ const QuoteContainer = (): React.ReactElement => {
   const text = useRef('');
 
   useEffect(() => {
-    const stoicQuote = require('stoic-quotes');
-
     const getQuote = async () => {
       try {
         setLoading(true);

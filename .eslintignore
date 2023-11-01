@@ -1,10 +1,9 @@
-# Ignore node_modules directory
-node_modules/
-
-# Ignore build or output directories
 build/
 dist/
-out/
-
-# Ignore specific files
-index.html
+node_modules/
+package-lock.json
+*.log
+*.debug
+.gitignore
+.npmignore
+.eslintrc.js
