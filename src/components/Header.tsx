@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Button } from './Button';
 import {
   Theme,
-  marbleTheme,
+  stoneTheme,
   theme as primaryTheme,
   secondaryTheme,
 } from '../Theme';
@@ -56,10 +56,10 @@ export const Header = ({ title, setTheme }: HeaderProps) => {
           Dark Theme
         </Button>
         <Button
-          onClick={() => switchTheme(marbleTheme)}
-          aria-label="Switch to Marble Theme"
+          onClick={() => switchTheme(stoneTheme)}
+          aria-label="Switch to Stone Theme"
         >
-          Marble Theme
+          Stone Theme
         </Button>
       </ButtonWrapper>
       <HeaderTitle>{title}</HeaderTitle>
