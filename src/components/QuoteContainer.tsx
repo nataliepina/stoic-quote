@@ -1,87 +1,51 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+
+import useQuote from 'hooks/useQuote';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import { ThreeDots } from 'react-loader-spinner';
-import { copyText } from '../helpers/helpers';
+import styled from 'styled-components';
+
 import { Button } from './Button';
-import { QuoteData, Quote } from './Quote';
-// @ts-ignore
-import stoicQuote from 'stoic-quotes';
+import { Quote } from './Quote';
 
 export const MainContainer = styled.div`
-  width: 75vw;
-  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   place-items: center center;
   font-family: ${({ theme: { fonts } }) => fonts.primary};
-  padding: 0.5rem 0;
-  color: ${({ theme: { colors } }) => colors.light};
+  text-align: center;
+  color: ${({ theme: { colors } }) => colors.text};
 
-  @media (min-width: 768px) {
-    padding: 2.5rem 0;
+  @media (min-width: 767px) {
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.xl};
   }
 `;
 
-export const ActionButtonsWrapper = styled.div`
-  margin: ${({ theme: { sizes } }) => sizes.xl} auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: ${({ theme: { sizes } }) => sizes.md};
+const SectionWrapper = styled.section`
+  border-radius: 20px;
+  background-color: ${({ theme: { colors } }) => colors.border};
+  padding: 2rem;
+  margin-block: 2rem;
 `;
 
-export const ButtonWrapper = styled.div`
-  margin: ${({ theme: { sizes } }) => sizes.xl} auto;
-  width: 100%;
+export const ButtonsWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: ${({ theme: { sizes } }) => sizes.md};
-  flex-direction: column;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
 `;
 
 const QuoteContainer = (): React.ReactElement => {
-  const [quote, setQuote] = useState<QuoteData | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [toolTip, setToolTip] = useState('Copy');
-  const text = useRef('');
-
-  useEffect(() => {
-    const getQuote = async () => {
-      try {
-        setLoading(true);
-        const res = await stoicQuote();
-        const { quote, author } = res;
-
-        setQuote({ quote, author });
-        text.current = `"${quote}" -${author}`;
-      } catch (e) {
-        setQuote(null);
-      } finally {
-        setTimeout(() => setLoading(false), 300);
-      }
-    };
-    if (!quote) getQuote();
-  }, [quote]);
-
-  const getNewQuote = () => {
-    setQuote(null);
-    setLoading(true);
-  };
-
-  const handleCopy = () => {
-    copyText(text.current);
-    setToolTip('Copied');
-    setTimeout(() => setToolTip('Copy'), 1500);
-  };
+  const { quote, loading, toolTip, text, handleCopy, getNewQuote } = useQuote();
 
   return (
     <MainContainer>
-      <section>
+      <SectionWrapper>
         <FaQuoteLeft />
         {loading ? (
           <ThreeDots
@@ -98,8 +62,8 @@ const QuoteContainer = (): React.ReactElement => {
         )}
 
         <FaQuoteRight />
-      </section>
-      <ActionButtonsWrapper>
+      </SectionWrapper>
+      <ButtonsWrapper>
         <Button onClick={getNewQuote}>New Quote</Button>
         <Button onClick={handleCopy}>{toolTip}</Button>
         <Button>
@@ -113,7 +77,7 @@ const QuoteContainer = (): React.ReactElement => {
             Tweet
           </a>
         </Button>
-      </ActionButtonsWrapper>
+      </ButtonsWrapper>
     </MainContainer>
   );
 };

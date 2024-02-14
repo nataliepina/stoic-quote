@@ -10,32 +10,37 @@ export interface QuoteData {
 }
 
 const QuoteWrapper = styled.div`
-  margin: 0 auto;
-  padding-bottom: ${({ theme: { sizes } }) => sizes.md};
-  width: 90%;
-  color: ${({ theme: { colors } }) => colors.light};
+  padding-block-end: ${({ theme: { sizes } }) => sizes.md};
+  color: ${({ theme: { colors } }) => colors.text};
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
+  width: 100%;
+
+  @media (min-width: 767px) {
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.xl};
+  }
 `;
 
 const BlockQuote = styled.blockquote`
-  text-align: center;
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
+  max-width: 50ch;
 `;
 
 const Citation = styled.cite`
-  font-size: ${({ theme: { fontSizes } }) => fontSizes.md};
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
 
   &:before {
     content: '— ';
+  }
+
+  @media (min-width: 767px) {
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.lg};
   }
 `;
 
 export const Quote = ({ quote }: QuoteProps): JSX.Element => {
   return (
-    <>
-      <QuoteWrapper>
-        <BlockQuote>{quote?.quote}</BlockQuote>
-        <Citation>{quote?.author}</Citation>
-      </QuoteWrapper>
-    </>
+    <QuoteWrapper>
+      <BlockQuote>{quote?.quote}</BlockQuote>
+      <Citation>{quote?.author}</Citation>
+    </QuoteWrapper>
   );
 };

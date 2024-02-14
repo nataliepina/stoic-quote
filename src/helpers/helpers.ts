@@ -7,3 +7,8 @@ export const copyText = (value: string): void => {
   document.execCommand('copy');
   document.body.removeChild(dummy);
 };
+
+export const getSelectedTheme = () => {
+  const storedTheme = localStorage.getItem('selectedTheme');
+  return storedTheme ? JSON.parse(storedTheme) : 'primaryTheme';
+};

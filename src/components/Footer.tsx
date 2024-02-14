@@ -3,21 +3,21 @@ import styled from 'styled-components';
 interface FooterProps {
   copyright?: string;
 }
+
 const FooterContainer = styled.footer`
-  width: 100%;
-  color: ${({ theme: { colors } }) => colors.light};
-  font-size: 0.8rem;
-  padding: 5px 0;
-  text-align: left;
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.xs};
+  text-align: right;
+  position: fixed;
+  bottom: 0;
 `;
 
 const Copyright = styled.p`
   a {
     text-decoration: none;
-    color: ${({ theme: { colors } }) => colors.light};
+    color: ${({ theme: { colors } }) => colors.text};
 
     &:hover {
-      color: ${({ theme: { colors } }) => colors.primary};
+      color: ${({ theme: { colors } }) => colors.accent};
     }
   }
 `;

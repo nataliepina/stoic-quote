@@ -2,15 +2,18 @@ import baseStyled, { ThemedStyledInterface } from 'styled-components';
 
 const baseTheme = {
   fonts: {
-    primary: 'Fraunces',
-    secondary: 'Cinzel',
+    primary: 'Fraunces, Arial, sans-serif',
+    secondary: 'Cinzel, Georgia, serif',
+    body: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
   },
   fontSizes: {
-    sm: '.8em',
-    base: '1em',
-    md: '1.3em',
-    lg: '2em',
-    xl: '2.8em',
+    xs: '0.8rem', // Extra small
+    sm: '1rem', // Small
+    base: '1.25rem', // Base (equivalent to 20px)
+    md: '1.563rem', // Medium
+    lg: '1.953rem', // Large
+    xl: '2.441rem', // Extra large
+    xxl: '3.052rem', // Double extra large
   },
   sizes: {
     xs: '4px',
@@ -25,36 +28,30 @@ const baseTheme = {
 export const theme = {
   ...baseTheme,
   colors: {
-    light: '#ffffff',
-    med: '#000000',
-    dark: '#0a0c0e',
-    primary: '#963d72',
-    body: '#0a0c0e',
     text: '#f9f9f9',
+    background: '#0a0c0e',
+    border: '#101212',
+    accent: '#3c7a89',
   },
 };
 
 export const secondaryTheme = {
   ...baseTheme,
   colors: {
-    light: '#0a0c0e',
-    med: '#ffffff',
-    dark: '#d2d7db',
-    primary: '#850f55',
-    body: '#ffffff',
     text: '#0a0c0e',
+    background: '#ffffff',
+    border: '#f5f5f5',
+    accent: '#3c7a89',
   },
 };
 
 export const stoneTheme = {
   ...baseTheme,
   colors: {
-    light: '#333333',
-    med: '#B0B0B0',
-    dark: '#333333',
-    primary: '#555555',
-    body: '#D9D9D9',
-    text: '#111111',
+    text: '#2f2f2f',
+    background: '#e2e2e2',
+    border: '#d6d6d6',
+    accent: '#3c7a89',
   },
 };
 
