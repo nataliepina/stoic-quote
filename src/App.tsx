@@ -11,13 +11,16 @@ import StoicQuote from './components/QuoteContainer';
 import GlobalStyles from './global-styles';
 import { theme as primaryTheme } from './Theme';
 
-export const Container = styled.main`
+export const AppContainer = styled.main`
   height: 100%;
-  /* text-align: center; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > * {
+    flex: 1;
+  }
 `;
 
 const TITLE = 'Stoic Quote';
@@ -29,12 +32,12 @@ const App = (): React.ReactElement => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Container>
+      <AppContainer>
         <ThemeSelector setTheme={setTheme} />
         <Header title={TITLE} />
         <StoicQuote />
         <Footer copyright={COPYRIGHT} />
-      </Container>
+      </AppContainer>
     </ThemeProvider>
   );
 };

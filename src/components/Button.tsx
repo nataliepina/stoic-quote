@@ -30,10 +30,6 @@ export const Btn = styled.button<ButtonProps>`
     border: 1px solid inherit;
   }
 
-  .btn-txt {
-    margin-right: 8px;
-  }
-
   a {
     color: inherit;
     text-decoration: none;
@@ -55,11 +51,6 @@ export const Btn = styled.button<ButtonProps>`
     css`
       outline: 1px solid ${({ theme: { colors } }) => colors.accent};
     `}
-
-
-    @media (min-width: 767px) {
-    font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
-  }
 `;
 
 export const Button = ({

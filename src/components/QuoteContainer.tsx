@@ -12,8 +12,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding-inline: 0.5rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   place-items: center center;

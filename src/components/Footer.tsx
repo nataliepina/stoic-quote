@@ -6,9 +6,10 @@ interface FooterProps {
 
 const FooterContainer = styled.footer`
   font-size: ${({ theme: { fontSizes } }) => fontSizes.xs};
-  text-align: right;
-  position: fixed;
-  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-block: 1rem;
 `;
 
 const Copyright = styled.p`

@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 
-import {
-  secondaryTheme,
-  stoneTheme,
-  theme as primaryTheme,
-  Theme,
-} from '../Theme';
+import { secondaryTheme, stoneTheme, theme as primaryTheme } from '../Theme';
 import { Button } from './Button';
 
 interface ThemeSelectorProps {
-  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  setTheme: React.Dispatch<React.SetStateAction<DefaultTheme>>;
 }
 
 const ThemeSelectorContainer = styled.div`
@@ -28,9 +23,9 @@ const ThemeSelectorWrapper = styled.div`
 `;
 
 export const ThemeSelector = ({ setTheme }: ThemeSelectorProps) => {
-  const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
+  const [selectedTheme, setSelectedTheme] = useState<DefaultTheme | null>(null);
 
-  const switchTheme = (newTheme: Theme) => {
+  const switchTheme = (newTheme: DefaultTheme) => {
     if (setTheme) {
       setTheme(newTheme);
       setSelectedTheme(newTheme);

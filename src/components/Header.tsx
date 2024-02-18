@@ -5,7 +5,8 @@ interface HeaderProps {
 }
 
 const HeaderTitle = styled.h1`
-  margin: 1rem auto 0;
+  margin-inline: auto;
+  margin-block: 2rem;
   color: ${({ theme: { colors } }) => colors.text};
   font-size: ${({ theme: { fontSizes } }) => fontSizes.lg};
   font-weight: 700;
